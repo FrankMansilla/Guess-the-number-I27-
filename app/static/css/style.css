@@ -1,0 +1,13 @@
+body {
+    color: black;
+} 
+
+body {
+    background-color: peru;
+} 
+
+.caja{ 
+    border-radius: 10%; 
+    border-color: black;
+    border-radius: 20%; 
+}
