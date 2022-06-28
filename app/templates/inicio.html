@@ -1,0 +1,35 @@
+{% extends './layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+</head>  
+<body>
+ <form class="formulario">
+    
+    <h1>Iniciar Sesion</h1>
+     <div class="contenedor">
+     
+ 
+         
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text" placeholder="Nombre de usuario">
+         
+         </div>
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input type="password" placeholder="Contraseña">
+         
+         </div>
+         <input type="submit" value="Iniciar Sesion" class="button">
+     </div>
+    </form>
+</body>
+
+{% endblock %}
