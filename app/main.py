@@ -20,24 +20,15 @@ def inicio():
 def registrate():
     return render_template('registrate.html')
 
-@app.route('/ejemplo/<nombre>/<int:edad>/<ciudad>')
-def ejemplo(nombre, edad, ciudad): 
-    data = {
-        'titulo' : 'Ejemplo', 
-        'nombre' : nombre,
-        'edad' : edad, 
-        'ciudad' : ciudad
+@app.route('/game')
+def game():
+    return render_template('game.html')
 
-    }
-
-    return render_template('ejemplo.html', data=data)
 
 
 def pagina_no_encontrada(error): 
     return render_template('404.html'), 404
     #return redirect(url_for('index'))
-
-
 
 if __name__ == '__main__': 
     app.register_error_handler(404, pagina_no_encontrada)
