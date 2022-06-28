@@ -6,8 +6,26 @@ body {
     background-color: peru;
 } 
 
-.caja{ 
-    border-radius: 10%; 
+.container{
+    width: 40%;
+    background-color: aliceblue;
+    height: 100px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+form{
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.caja{  
+    height: 20px;
+    margin-top: 2px;
     border-color: black;
-    border-radius: 20%; 
+    border-radius: 5px;
+
 }

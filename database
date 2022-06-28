@@ -1,0 +1,6 @@
+mysql es el sevidor de base de datos, dentro de ese sevidor creamos una base de datos y 
+sqlalchemy se conecta a esa base de datos dentro de ese servidor y una vez que se conecta
+se puede manejar la bd
+
+user: root
+password: Frank?1234

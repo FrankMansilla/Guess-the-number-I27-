@@ -7,10 +7,15 @@
 
 {% block body %}
     <h1>Pagina Principal</h1>
-    <form action="POST">
-    <input type="text" class="caja" placeholder="Ingresa Un Nombre De Usuario"> 
-    <input type="password"  class="caja" placeholder="Ingresa Una Contraseña">  
-    </form>
+    <div class="container">
+        <form action="/newUser" method="POST">
+            <input type="text" name='name'class="caja" placeholder="Ingresa Un Nombre De Usuario">  
+            <input type="text" name='name'class="caja" placeholder="Ingresa Tu Nombre Completo"> 
+            <input type="text" name='name'class="caja" placeholder="Ingresa Un Email"> 
+            <input type="text" name='password' class="caja" placeholder="Ingresa Una Contraseña"> 
+            <input class="start" type="submit" value="Send" />
+        </form>
+    </div>
 {% endblock %}  
 
 

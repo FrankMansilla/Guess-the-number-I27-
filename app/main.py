@@ -1,30 +1,30 @@
-
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify 
 from flask_sqlalchemy import SQLAlchemy
 import sqlalchemy
-import os
-
+from utils.db import db
+from models import User
+from models.User import User
+from routes import reglas
 
 app = Flask(__name__)  
 
 
-@app.route('/') 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Frank?1234@localhost/GuessTheNumber'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+SQLAlchemy(app)
+
+with app.app_context():
+    db.create_all()
+
+
+@app.route('/', methods=['POST', 'GET']) 
 def index(): 
-    return render_template('index.html')
+  return render_template('index.html')
 
-@app.route('/ejemplo/<nombre>/<int:edad>/<ciudad>')
-def ejemplo(nombre, edad, ciudad): 
-    data = {
-        'titulo' : 'Ejemplo', 
-        'nombre' : nombre,
-        'edad' : edad, 
-        'ciudad' : ciudad
-
-    }
-
-    return render_template('ejemplo.html', data=data)
-
-
+@app.route('/')
+def rules(): 
+    return render_template('reglas.html')
+ 
 def pagina_no_encontrada(error): 
     return render_template('404.html'), 404
     #return redirect(url_for('index'))
