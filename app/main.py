@@ -12,6 +12,14 @@ app = Flask(__name__)
 def index(): 
     return render_template('index.html')
 
+@app.route('/inicio')
+def inicio():
+    return render_template('inicio.html')
+
+@app.route('/registrate')
+def registrate():
+    return render_template('registrate.html')
+
 @app.route('/ejemplo/<nombre>/<int:edad>/<ciudad>')
 def ejemplo(nombre, edad, ciudad): 
     data = {
